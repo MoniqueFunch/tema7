@@ -20,20 +20,22 @@
 
     <script>
         const tilfaeldigtTal = Math.round(Math.random() * 20);
+        let antalGæt = 0;
         document.querySelector("button").addEventListener("click", guessTal);
 
 
 
         function guessTal() {
+            antalGæt++;
             const guess = document.querySelector("#gæt").value;
-            console.log("tilfaeldigtTal", tilfaeldigtTal);
+            //            console.log("tilfaeldigtTal", tilfaeldigtTal);
             console.log("brugergæt", guess);
             if (guess == tilfaeldigtTal) {
-                console.log("RIGTIGT!");
+                console.log(`RIGTIGT! Du har gættet ${antalGæt} gange`);
             } else if (guess > tilfaeldigtTal) {
-                console.log("For højt");
+                console.log(`For højt! Du har gættet ${antalGæt} gange`);
             } else {
-                console.log("For lavt");
+                console.log(`For lavt! Du har gættet ${antalGæt} gange`);
             }
         }
 
