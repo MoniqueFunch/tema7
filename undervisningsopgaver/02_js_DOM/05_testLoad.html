@@ -122,7 +122,6 @@
             P2.innerHTML = "<p>Tekst til artikel 2. Blablablabla hej hejj. </p>"
 
             //Tilføjelse af ny article
-
             let mainSection = document.querySelector("section");
 
             // nyt article element
@@ -136,7 +135,6 @@
             let overskrift = document.createElement("h3");
             let paragraph = document.createElement("p");
 
-
             //tekst til overskriften
             let overskriftText = document.createTextNode("Article 3");
             let paragraphText = document.createTextNode("hej hej blalbalbalblablalb ny tekst her");
@@ -145,16 +143,19 @@
             overskrift.appendChild(overskriftText);
             paragraph.appendChild(paragraphText);
 
-
             //tilføj overskrift til article
             newArticle.appendChild(img);
             newArticle.appendChild(overskrift);
             newArticle.appendChild(paragraph);
 
-
             //tilføj article til
             mainSection.appendChild(newArticle);
+        }
 
+        IMG1.addEventListener("click", doSomething);
+
+        function doSomething() {
+            IMG1.src = "https://placeimg.com/640/480/tech";
         }
 
     </script>
