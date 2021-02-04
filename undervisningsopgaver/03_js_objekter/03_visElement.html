@@ -9,9 +9,12 @@
 </head>
 
 <body>
-    <article id="article">
-        <p></p>
+    <article id="dyr">
+        <h3></h3>
         <img src="" alt="">
+        <p>Type:</p>
+        <p>Levested:</p>
+
     </article>
     <script>
         let dyr = {
@@ -30,9 +33,20 @@
         function start() {
             console.log("dom er loaded");
 
-            const destination = document.querySelector("#article");
-            destination.querySelector("p").textContent = `dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
-            destination.querySelector("img").src = dyr.billede;
+            // Hive fat i article 1's overskrift
+            const overskrift = document.querySelector("article h3");
+            console.log(overskrift);
+
+            // tilføje h3'er
+            overskrift.innerHTML = "<h3>gris</h3>";
+
+            // Hive fat i img tagget
+            const img = document.querySelector("article img");
+            console.log(img);
+
+            // tilføje img
+            img.src = "http://mabe-kea.dk/E19/pics/pig.png";
+
         }
 
     </script>
