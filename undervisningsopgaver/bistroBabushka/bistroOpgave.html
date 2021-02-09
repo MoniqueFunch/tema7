@@ -41,7 +41,8 @@
         margin: 1rem;
     }
 
-    section {
+    section,
+    h1 {
         max-width: 1200px;
         height: auto;
         margin: 0 auto;
@@ -64,7 +65,7 @@
     <section id="liste">
     </section>
     <template>
-        <article>
+        <article class="ret">
             <img src="" alt="" class="billede">
             <h2 class="navn"></h2>
             <p class="kortbeskrivelse"></p>
@@ -86,6 +87,7 @@
         let filter = "alle";
 
         //første funktion der kaldes efter Dom er loaded
+
         function start() {
             const filterKnapper = document.querySelectorAll("nav button");
             filterKnapper.forEach(knap => knap.addEventListener("click", filtrerRetter));
@@ -98,7 +100,9 @@
             this.classList.add("valgt")
             visRetter();
             header.textContent = this.textContent;
+
         }
+
 
         async function loadJSON() {
             const JSONData = await fetch("https://babushka-dd8a.restdb.io/rest/menu", {
@@ -123,9 +127,17 @@
                     klon.querySelector(".navn").textContent = ret.navn;
                     klon.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
                     klon.querySelector(".pris").textContent = `${"Pris: "}` + ret.pris + `${",-"}`;
+
+                    klon.querySelector(".ret").addEventListener("click", () => visDetaljer(ret));
+
                     dest.appendChild(klon);
                 }
             })
+        }
+
+        function visDetaljer(hvad) {
+            location.href = `detailView.html?id=${hvad._id}`;
+
         }
 
     </script>
