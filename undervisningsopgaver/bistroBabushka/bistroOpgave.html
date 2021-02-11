@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Bistro Babushka</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -21,11 +22,12 @@
     }
 
     article {
-    border: 1px solid #DA251C;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #CBA9BE;
+        /*    border: 1px solid #974478;*/
+        padding: 1rem;
+        border-radius: 3px;
+        background-color: #CBA9BE;
     }
+
     body {
         background-color: #DBD4C4;
     }
@@ -42,6 +44,11 @@
         margin: 1rem;
     }
 
+    /*
+    section {
+        background-color: #974478;
+    }
+*/
     section,
     h1 {
         max-width: 1200px;
@@ -61,27 +68,29 @@
     button {
         font-family: 'kremlinregular';
         background-color: #CBA9BE;
-       border: none;
+        font-size: 0.8rem;
+        border: none;
         padding: 10px;
 
     }
 
     h1 {
         font-family: 'kremlinregular';
-        color: #974478;
-        font-size: 2rem;
+        color: black;
+        font-size: 1.7rem;
         text-transform: uppercase;
+        padding: 25px;
     }
 
     h2 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 1.5rem;
         text-transform: uppercase;
         color: black;
     }
 
     p {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 1rem;
         color: black;
         line-height: 1.4;
@@ -99,10 +108,30 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'kremlinregular';
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 3px;
+        background-color: #974478;
+
+    }
+
+    footer a {
+        color: black;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
 </style>
 
 <body>
-    <header>
+    <header id="my_header">
         <img class="splash" src="header.jpg" alt="">
         <nav>
             <button data-kategori="alle" class="valgt">Menu</button>
@@ -191,4 +220,7 @@
 
         }
     </script>
-</body></html>
+</body>
+<footer id="footer">
+    <a href="#my_header">Til toppen</a>
+</footer></html>
