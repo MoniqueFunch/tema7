@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <style>
@@ -20,11 +21,11 @@
     }
 
     article {
-        border: 2px solid #974478;
-        border-radius: 25px;
-        padding: 1rem;
+    border: 1px solid #DA251C;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #CBA9BE;
     }
-
     body {
         background-color: #DBD4C4;
     }
@@ -37,7 +38,7 @@
     nav {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /*        align-items: center;*/
         margin: 1rem;
     }
 
@@ -46,6 +47,7 @@
         max-width: 1200px;
         height: auto;
         margin: 0 auto;
+        padding: 10px;
     }
 
     @font-face {
@@ -57,32 +59,37 @@
     }
 
     button {
-        font-family: sans-serif;
+        font-family: 'kremlinregular';
+        background-color: #CBA9BE;
+       border: none;
+        padding: 10px;
+
     }
 
     h1 {
         font-family: 'kremlinregular';
         color: #974478;
-        font-size: 3rem;
+        font-size: 2rem;
         text-transform: uppercase;
     }
 
     h2 {
-        font-family: sans-serif;
-        font-size: 2rem;
-        color: #445C5B;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: black;
     }
 
     p {
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
-        color: #445C5B;
+        color: black;
         line-height: 1.4;
     }
 
 
     .splash {
-        background-image: url(splash.jpg);
+        /*        background-image: url(splash.jpg);*/
         background-size: cover;
         width: 50%;
         display: flex;
@@ -96,7 +103,7 @@
 
 <body>
     <header>
-        <img class="splash" src="splash.jpg" alt="">
+        <img class="splash" src="header.jpg" alt="">
         <nav>
             <button data-kategori="alle" class="valgt">Menu</button>
             <button data-kategori="forretter">Foretter</button>
